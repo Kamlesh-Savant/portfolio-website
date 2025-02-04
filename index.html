@@ -1,396 +1,563 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Software Developer | Transform Your Business Digitally</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #2a2a72;
-            --secondary: #FF6B6B;
-            --accent: #4ECDC4;
-            --dark: #2d3436;
-            --light: #f8f9fa;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senior Software Developer | Transform Your Business Digitally</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2a2a72;
+      --secondary: #FF6B6B;
+      --accent: #4ECDC4;
+      --dark: #2d3436;
+      --light: #f8f9fa;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            overflow-x: hidden;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      overflow-x: hidden;
+    }
 
-        /* Header */
-        .header {
-            background: var(--primary);
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+    /* Header */
+    .header {
+      background: var(--primary);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
 
-        /* Hero Section */
-        .hero {
-            padding: 8rem 1rem 4rem;
-            text-align: center;
-            background: linear-gradient(135deg, var(--primary) 0%, #4a4a8a 100%);
-            color: white;
-            position: relative;
-            overflow: hidden;
-            margin-top: 60px;
-        }
+    /* Hero Section */
+    .hero {
+      padding: 8rem 1rem 4rem;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary) 0%, #4a4a8a 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+      margin-top: 60px;
+    }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            left: -10%;
-            right: -10%;
-            height: 100px;
-            background: white;
-            transform: rotate(-2deg);
-        }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left: -10%;
+      right: -10%;
+      height: 100px;
+      background: white;
+      transform: rotate(-2deg);
+    }
 
-        /* Services Grid */
-        .services {
-            padding: 4rem 1rem;
-            background: var(--light);
-        }
+    /* Services Grid */
+    .services {
+      padding: 4rem 1rem;
+      background: var(--light);
+    }
 
-        .service-grid {
-            display: grid;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .service-grid {
+      display: grid;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            text-align: center;
-        }
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
 
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-            display: inline-block;
-            background: rgba(78, 205, 196, 0.1);
-            padding: 1.5rem;
-            border-radius: 50%;
-        }
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--secondary);
+      margin-bottom: 1rem;
+      display: inline-block;
+      background: rgba(78, 205, 196, 0.1);
+      padding: 1.5rem;
+      border-radius: 50%;
+    }
 
-        /* Benefits Section */
-        .benefits {
-            padding: 4rem 1rem;
-            background: white;
-        }
+    /* Benefits Section */
+    .benefits {
+      padding: 4rem 1rem;
+      background: white;
+    }
 
-        .benefits-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
+    .benefits-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
 
-        .benefit-card {
-            background: linear-gradient(145deg, white 0%, #f8f9fa 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            position: relative;
-            overflow: hidden;
-        }
+    .benefit-card {
+      background: linear-gradient(145deg, white 0%, #f8f9fa 100%);
+      padding: 2rem;
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+    }
 
-        .benefit-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--secondary);
-        }
+    .benefit-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--secondary);
+    }
 
-        .benefit-icon {
-            font-size: 2rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
+    .benefit-icon {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
 
-        /* Portfolio Section */
-        .portfolio {
-            padding: 4rem 1rem;
-            background: var(--light);
-        }
+    /* Portfolio Section */
+    .portfolio {
+      padding: 4rem 1rem;
+      background: var(--light);
+    }
 
-        .portfolio-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .portfolio-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        .portfolio-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
+    .portfolio-item {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
 
-        .portfolio-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
+    .portfolio-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
 
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(42, 42, 114, 0.9);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 2rem;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
+    .portfolio-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(42, 42, 114, 0.9);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
 
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
 
-        /* Testimonials Section */
-        .testimonials {
-            padding: 4rem 1rem;
-            background: white;
-        }
+    /* Testimonials Section */
+    .testimonials {
+      padding: 4rem 1rem;
+      background: white;
+    }
 
-        .testimonial-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .testimonial-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        .testimonial-card {
-            background: var(--light);
-            padding: 2rem;
-            border-radius: 15px;
-            position: relative;
-        }
+    .testimonial-card {
+      background: var(--light);
+      padding: 2rem;
+      border-radius: 15px;
+      position: relative;
+    }
 
-        /* Contact Section */
-        .contact {
-            padding: 4rem 1rem;
-            background: var(--primary);
-            color: white;
-        }
+    /* Contact Section */
+    .contact {
+      padding: 4rem 1rem;
+      background: var(--primary);
+      color: white;
+    }
 
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
 
-        .form-input {
-            width: 100%;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border: none;
-            border-radius: 8px;
-        }
+    .form-input {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 8px;
+    }
 
-        /* Responsive Design */
-        @media (min-width: 768px) {
-            .service-grid { grid-template-columns: repeat(3, 1fr); }
-            .hero { padding: 10rem 1rem 6rem; }
-        }
+    /* Responsive Design */
+    @media (min-width: 768px) {
+      .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2rem;
-        }
+      .hero {
+        padding: 10rem 1rem 6rem;
+      }
+    }
 
-        .button { 
-            display: inline-flex;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: var(--secondary);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: transform 0.3s;
-            gap: 0.5rem;
-        }
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2rem;
+    }
 
-        .button:hover {
-            transform: translateY(-3px);
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    .button {
+      display: inline-flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--secondary);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: transform 0.3s;
+      gap: 0.5rem;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .service-item {
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .tech-stack span {
+      transition: transform 0.3s ease;
+    }
+
+    .tech-stack span:hover {
+      transform: scale(1.05);
+      cursor: default;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header class="header">
-        <h1>🚀 Digital Transformation Expert</h1>
-        <p>10+ Years Creating Business Solutions</p>
-    </header>
+  <header class="header">
+    <h1>🚀 Digital Transformation Expert</h1>
+    <p>10+ Years Creating Business Solutions</p>
+  </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Turn Your Vision Into <span style="color: var(--secondary);">Profit</span></h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Web | Mobile | Desktop Solutions That Drive Growth</p>
-            <a href="#contact" class="button">
-                Start Your Journey
-                <i class="fas fa-arrow-right"></i>
-            </a>
+  <section class="hero">
+    <div class="hero-content">
+      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Turn Your Vision Into <span style="color: var(--secondary);">Profit</span></h2>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem;">Web | Mobile | Desktop Solutions That Drive Growth</p>
+      <a href="#contact" class="button">
+        Start Your Journey
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <section class="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-globe"></i></div>
+        <h3>Web Development</h3>
+        <p>High-performance web applications with React & Node.js</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile Apps</h3>
+        <p>Native iOS/Android & cross-platform Flutter solutions</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-desktop"></i></div>
+        <h3>Desktop Software</h3>
+        <p>Enterprise-grade desktop applications with Electron & .NET</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Add after Services section -->
+  <section class="detailed-services">
+    <!-- Web App Services -->
+    <!-- Web App Services -->
+    <div class="service-category" style="background: var(--light); padding: 4rem 1rem;">
+      <div class="service-category-content" style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">
+          <i class="fas fa-globe"></i> Web Application Services
+        </h2>
+        <div class="service-list" style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-briefcase" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Business Websites</h3>
+            <p>Corporate websites</p>
+            <p>Small business websites</p>
+            <p>Personal brand websites</p>
+          </div>
+          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-shopping-cart" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>E-Commerce Platforms</h3>
+            <p>Online stores (Shopify, WooCommerce, Magento)</p>
+            <p>Marketplace platforms (multi-vendor stores)</p>
+            <p>Subscription-based e-commerce</p>
+          </div>
+          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-cogs" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Web Applications</h3>
+            <p>Custom SaaS (Software as a Service) applications</p>
+            <p>CRM (Customer Relationship Management) systems</p>
+            <p>ERP (Enterprise Resource Planning) solutions</p>
+          </div>
+          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-calendar-alt" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Booking & Scheduling Platforms</h3>
+            <p>Appointment booking websites</p>
+            <p>Hotel and travel booking platforms</p>
+            <p>Event management and ticketing systems</p>
+          </div>
+          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-palette" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Portfolio & Creative Websites</h3>
+            <p>Portfolio websites for designers, artists, and photographers</p>
+            <p>Digital agency websites</p>
+            <p>Personal resume and CV websites</p>
+          </div>
+          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-book-open" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Educational Websites</h3>
+            <p>E-learning platforms (LMS, online courses)</p>
+            <p>Membership-based training websites</p>
+            <p>School and university websites</p>
+          </div>
+          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-users" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Social Media & Community Websites</h3>
+            <p>Social networking platforms</p>
+            <p>Forum and discussion boards</p>
+            <p>Membership-based community websites</p>
+          </div>
+          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-newspaper" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>News & Blog Websites</h3>
+            <p>News portals and magazines</p>
+            <p>Personal and professional blogs</p>
+            <p>Content curation platforms</p>
+          </div>
+          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-bullhorn" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Landing Pages</h3>
+            <p>Product launch pages</p>
+            <p>Marketing and advertising campaign pages</p>
+            <p>Lead generation pages</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <section class="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-globe"></i></div>
-                <h3>Web Development</h3>
-                <p>High-performance web applications with React & Node.js</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                <h3>Mobile Apps</h3>
-                <p>Native iOS/Android & cross-platform Flutter solutions</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-desktop"></i></div>
-                <h3>Desktop Software</h3>
-                <p>Enterprise-grade desktop applications with Electron & .NET</p>
-            </div>
+    <!-- Mobile App Services -->
+    <div class="service-category" style="background: white; padding: 4rem 1rem;">
+      <div class="service-category-content" style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">
+          <i class="fas fa-mobile-alt"></i> Mobile Application Services
+        </h2>
+        <div class="service-list" style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+          <div class="service-item" style="background: var(--light); padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-dumbbell" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Fitness Apps</h3>
+            <p>Workout tracking & health monitoring</p>
+          </div>
+          <div class="service-item" style="background: var(--light); padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-wallet" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Finance Apps</h3>
+            <p>Mobile banking & financial management</p>
+          </div>
+          <!-- Add more mobile services -->
         </div>
-    </section>
-
-    <section class="benefits">
-        <h2 class="section-title">Your Benefits</h2>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>Revenue Growth</h3>
-                <p>24/7 digital storefront increases sales conversion by 40%</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-clock"></i></div>
-                <h3>Time Saving</h3>
-                <p>Automation reduces manual work by 15 hours/week</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3>Security First</h3>
-                <p>Enterprise-grade security protocols for your peace of mind</p>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
-                <h3>Fast Deployment</h3>
-                <p>Agile development process delivering results in weeks</p>
-            </div>
+        <div class="tech-stack" style="margin-top: 2rem; text-align: center;">
+          <h4 style="color: var(--dark); margin-bottom: 1rem;">Technology Stack:</h4>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Flutter</span>
+            <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Swift</span>
+            <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Kotlin</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <section class="portfolio">
-        <h2 class="section-title">Our Work</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="https://source.unsplash.com/random/800x600?ecommerce" alt="E-commerce Platform">
-                <div class="portfolio-overlay">
-                    <h3>E-commerce Platform</h3>
-                    <p>React, Node.js, MongoDB</p>
-                    <a href="#" class="button" style="margin-top: 1rem;">View Case Study</a>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://source.unsplash.com/random/800x600?mobileapp" alt="Mobile App">
-                <div class="portfolio-overlay">
-                    <h3>Fitness Tracker App</h3>
-                    <p>Flutter, Firebase, AI Integration</p>
-                    <a href="#" class="button" style="margin-top: 1rem;">View Case Study</a>
-                </div>
-            </div>
+    <!-- Desktop App Services -->
+    <div class="service-category" style="background: var(--light); padding: 4rem 1rem;">
+      <div class="service-category-content" style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">
+          <i class="fas fa-desktop"></i> Desktop Application Services
+        </h2>
+        <div class="service-list" style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-industry" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Enterprise Solutions</h3>
+            <p>Custom ERP & inventory management</p>
+          </div>
+          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+            <i class="fas fa-paint-brush" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+            <h3>Creative Tools</h3>
+            <p>Design & multimedia applications</p>
+          </div>
+          <!-- Add more desktop services -->
         </div>
-    </section>
-
-    <section class="testimonials">
-        <h2 class="section-title">Client Testimonials</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <p>"Outstanding development work that exceeded our expectations. Delivered on time and within budget."</p>
-                <h4 style="margin-top: 1rem;">— John Smith, Tech Startup CEO</h4>
-            </div>
-            <div class="testimonial-card">
-                <p>"Transformed our legacy system into a modern web application with perfect feature implementation."</p>
-                <h4 style="margin-top: 1rem;">— Sarah Johnson, Enterprise Client</h4>
-            </div>
+        <div class="tech-stack" style="margin-top: 2rem; text-align: center;">
+          <h4 style="color: var(--dark); margin-bottom: 1rem;">Technology Stack:</h4>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Electron</span>
+            <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">.NET</span>
+            <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Java</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="contact" id="contact">
-        <h2 class="section-title">Start Your Project</h2>
-        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" class="form-input" name="name" placeholder="Your Name" required>
-            <input type="email" class="form-input" name="email" placeholder="Your Email" required>
-            <textarea class="form-input" name="message" rows="5" placeholder="Project Details" required></textarea>
-            <button type="submit" class="button">
-                Send Message
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </form>
-    </section>
+  <section class="benefits">
+    <h2 class="section-title">Your Benefits</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Revenue Growth</h3>
+        <p>24/7 digital storefront increases sales conversion by 40%</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+        <h3>Time Saving</h3>
+        <p>Automation reduces manual work by 15 hours/week</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Security First</h3>
+        <p>Enterprise-grade security protocols for your peace of mind</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+        <h3>Fast Deployment</h3>
+        <p>Agile development process delivering results in weeks</p>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+  <section class="portfolio">
+    <h2 class="section-title">Our Work</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="https://source.unsplash.com/random/800x600?ecommerce" alt="E-commerce Platform">
+        <div class="portfolio-overlay">
+          <h3>E-commerce Platform</h3>
+          <p>React, Node.js, MongoDB</p>
+          <a href="#" class="button" style="margin-top: 1rem;">View Case Study</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://source.unsplash.com/random/800x600?mobileapp" alt="Mobile App">
+        <div class="portfolio-overlay">
+          <h3>Fitness Tracker App</h3>
+          <p>Flutter, Firebase, AI Integration</p>
+          <a href="#" class="button" style="margin-top: 1rem;">View Case Study</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2 class="section-title">Client Testimonials</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"Outstanding development work that exceeded our expectations. Delivered on time and within budget."</p>
+        <h4 style="margin-top: 1rem;">— John Smith, Tech Startup CEO</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Transformed our legacy system into a modern web application with perfect feature implementation."</p>
+        <h4 style="margin-top: 1rem;">— Sarah Johnson, Enterprise Client</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">Start Your Project</h2>
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" class="form-input" name="name" placeholder="Your Name" required>
+      <input type="email" class="form-input" name="email" placeholder="Your Email" required>
+      <textarea class="form-input" name="message" rows="5" placeholder="Project Details" required></textarea>
+      <button type="submit" class="button">
+        Send Message
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </form>
+  </section>
+
+  <script>
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
         });
+      });
+    });
 
-        // Reveal animations on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
+    // Reveal animations on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
 
-        document.querySelectorAll('.service-card, .portfolio-item, .testimonial-card').forEach((el) => {
-            observer.observe(el);
-        });
-    </script>
+    document.querySelectorAll('.service-card, .portfolio-item, .testimonial-card').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
 </body>
+
 </html>
