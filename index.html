@@ -4,558 +4,206 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Senior Software Developer | Transform Your Business Digitally</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2a2a72;
-      --secondary: #FF6B6B;
-      --accent: #4ECDC4;
-      --dark: #2d3436;
-      --light: #f8f9fa;
-    }
+  <title>TechCraft Solutions - Custom Software Development Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      color: var(--dark);
-      overflow-x: hidden;
-    }
-
-    /* Header */
-    .header {
-      background: var(--primary);
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 8rem 1rem 4rem;
-      text-align: center;
-      background: linear-gradient(135deg, var(--primary) 0%, #4a4a8a 100%);
-      color: white;
-      position: relative;
-      overflow: hidden;
-      margin-top: 60px;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -50px;
-      left: -10%;
-      right: -10%;
-      height: 100px;
-      background: white;
-      transform: rotate(-2deg);
-    }
-
-    /* Services Grid */
-    .services {
-      padding: 4rem 1rem;
-      background: var(--light);
-    }
-
-    .service-grid {
-      display: grid;
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .service-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-align: center;
-    }
-
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    }
-
-    .service-icon {
-      font-size: 2.5rem;
-      color: var(--secondary);
-      margin-bottom: 1rem;
-      display: inline-block;
-      background: rgba(78, 205, 196, 0.1);
-      padding: 1.5rem;
-      border-radius: 50%;
-    }
-
-    /* Benefits Section */
-    .benefits {
-      padding: 4rem 1rem;
-      background: white;
-    }
-
-    .benefits-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    .benefit-card {
-      background: linear-gradient(145deg, white 0%, #f8f9fa 100%);
-      padding: 2rem;
-      border-radius: 15px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .benefit-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--secondary);
-    }
-
-    .benefit-icon {
-      font-size: 2rem;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-
-    /* Portfolio Section */
-    .portfolio {
-      padding: 4rem 1rem;
-      background: var(--light);
-    }
-
-    .portfolio-grid {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .portfolio-item {
-      position: relative;
-      border-radius: 15px;
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-
-    .portfolio-item img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-
-    .portfolio-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(42, 42, 114, 0.9);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 2rem;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .portfolio-item:hover .portfolio-overlay {
-      opacity: 1;
-    }
-
-    /* Testimonials Section */
-    .testimonials {
-      padding: 4rem 1rem;
-      background: white;
-    }
-
-    .testimonial-grid {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .testimonial-card {
-      background: var(--light);
-      padding: 2rem;
-      border-radius: 15px;
-      position: relative;
-    }
-
-    /* Contact Section */
-    .contact {
-      padding: 4rem 1rem;
-      background: var(--primary);
-      color: white;
-    }
-
-    .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .form-input {
-      width: 100%;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border: none;
-      border-radius: 8px;
-    }
-
-    /* Responsive Design */
-    @media (min-width: 768px) {
-      .service-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .hero {
-        padding: 10rem 1rem 6rem;
-      }
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 3rem;
-      font-size: 2rem;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: var(--secondary);
-      color: white;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: transform 0.3s;
-      gap: 0.5rem;
-    }
-
-    .button:hover {
-      transform: translateY(-3px);
-    }
-
-    .service-item {
-      transition: all 0.3s ease;
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .service-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .tech-stack span {
-      transition: transform 0.3s ease;
-    }
-
-    .tech-stack span:hover {
-      transform: scale(1.05);
-      cursor: default;
-    }
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header class="header">
-    <h1>🚀 Digital Transformation Expert</h1>
-    <p>10+ Years Creating Business Solutions</p>
-  </header>
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-cube"></i>
+      <span>TechCraft</span>
+    </div>
+    <div class="mobile-menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#services"><i class="fas fa-cogs"></i> Services</a></li>
+      <li><a href="#portfolio"><i class="fas fa-project-diagram"></i> Portfolio</a></li>
+      <li><a href="#testimonials"><i class="fas fa-quote-right"></i> Testimonials</a></li>
+      <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="#contact" class="nav-cta"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
 
   <section class="hero">
     <div class="hero-content">
-      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Turn Your Vision Into <span style="color: var(--secondary);">Profit</span></h2>
-      <p style="font-size: 1.2rem; margin-bottom: 2rem;">Web | Mobile | Desktop Solutions That Drive Growth</p>
-      <a href="#contact" class="button">
-        Start Your Journey
-        <i class="fas fa-arrow-right"></i>
-      </a>
+      <h1>Transform Your Ideas Into Reality</h1>
+      <p>We craft custom software solutions that drive business growth and innovation. From web applications to mobile apps, we bring your vision to life.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn primary-btn"><i class="fas fa-paper-plane"></i> Get Free Consultation</a>
+        <a href="#portfolio" class="btn secondary-btn"><i class="fas fa-eye"></i> View Our Work</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <!-- <div class="stat-item">
+        <i class="fas fa-check-circle"></i>
+        <span class="stat-number">500+</span>
+        <span class="stat-label">Projects Completed</span>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-users"></i>
+        <span class="stat-number">200+</span>
+        <span class="stat-label">Happy Clients</span>
+      </div> -->
+      <div class="stat-item">
+        <i class="fas fa-clock"></i>
+        <span class="stat-number">7+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
     </div>
   </section>
 
-  <section class="services">
-    <h2 class="section-title">Our Services</h2>
-    <div class="service-grid">
+  <section id="services">
+    <h2 class="section-title">Our Services <span class="title-accent">⚡</span></h2>
+    <div class="services-grid">
       <div class="service-card">
         <div class="service-icon"><i class="fas fa-globe"></i></div>
         <h3>Web Development</h3>
-        <p>High-performance web applications with React & Node.js</p>
+        <p>We provide a full suite of customized web development services, including custom application development, redevelopment, re-platforming, and new web application creation. Our solutions are tailored to align with your business model, ensuring that each project meets your unique requirements.</p>
+        <ul>
+          <li>Custom Web Applications</li>
+          <li>E-commerce Solutions</li>
+          <li>CMS & CRM Development</li>
+          <li>API Development & Integration</li>
+          <li><strong>Progressive Web Apps (PWA)</strong></li> <!-- New point added -->
+        </ul>
       </div>
+
       <div class="service-card">
         <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
         <h3>Mobile Apps</h3>
-        <p>Native iOS/Android & cross-platform Flutter solutions</p>
+        <p>Transform your app idea into reality with our expert mobile development services. Whether for iOS, Android, or cross-platform, we build high-performing apps tailored to your business needs. we integrate cutting-edge technology with deep market insights.</p>
+        <ul>
+          <li>iOS & Android Development</li>
+          <li>Cross-platform Apps</li>
+          <li>Third-party API integration</li>
+          <li>Payment gateway integration</li>
+          <li>Social media integration</li>
+        </ul>
       </div>
+
       <div class="service-card">
         <div class="service-icon"><i class="fas fa-desktop"></i></div>
-        <h3>Desktop Software</h3>
-        <p>Enterprise-grade desktop applications with Electron & .NET</p>
+        <h3>Desktop Applications</h3>
+        <p>Empower your business with high-performance desktop applications designed for Windows, macOS, and Linux. Whether you need a brand-new application or an upgrade with enhanced functionality, we deliver custom, scalable, and secure solutions tailored to your needs.</p>
+        <ul>
+          <li>Operations management software</li>
+          <li>Employee productivity software</li>
+          <li>Financial software (Billing, Invoicing)</li>
+          <li>Hospital inventory management</li>
+          <li>Utility software</li>
+        </ul>
       </div>
+
     </div>
   </section>
 
-  <!-- Add after Services section -->
-  <section class="detailed-services">
-    <!-- Web App Services -->
-    <!-- Web App Services -->
-    <div class="service-category" style="background: var(--light); padding: 4rem 1rem;">
-      <div class="service-category-content" style="max-width: 1200px; margin: 0 auto;">
-        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">
-          <i class="fas fa-globe"></i> Web Application Services
-        </h2>
-        <div class="service-list" style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-briefcase" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>Business Websites</h3>
-            <p>Corporate websites</p>
-            <p>Small business websites</p>
-            <p>Personal brand websites</p>
-          </div>
-          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-shopping-cart" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>E-Commerce Platforms</h3>
-            <p>Online stores (Shopify, WooCommerce, Magento)</p>
-            <p>Marketplace platforms (multi-vendor stores)</p>
-            <p>Subscription-based e-commerce</p>
-          </div>
-          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-cogs" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>Web Applications</h3>
-            <p>Custom SaaS (Software as a Service) applications</p>
-            <p>CRM (Customer Relationship Management) systems</p>
-            <p>ERP (Enterprise Resource Planning) solutions</p>
-          </div>
-          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-calendar-alt" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>Booking & Scheduling Platforms</h3>
-            <p>Appointment booking websites</p>
-            <p>Hotel and travel booking platforms</p>
-            <p>Event management and ticketing systems</p>
-          </div>
-          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-palette" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>Portfolio & Creative Websites</h3>
-            <p>Portfolio websites for designers, artists, and photographers</p>
-            <p>Digital agency websites</p>
-            <p>Personal resume and CV websites</p>
-          </div>
-          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-book-open" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>Educational Websites</h3>
-            <p>E-learning platforms (LMS, online courses)</p>
-            <p>Membership-based training websites</p>
-            <p>School and university websites</p>
-          </div>
-          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-users" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>Social Media & Community Websites</h3>
-            <p>Social networking platforms</p>
-            <p>Forum and discussion boards</p>
-            <p>Membership-based community websites</p>
-          </div>
-          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-newspaper" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>News & Blog Websites</h3>
-            <p>News portals and magazines</p>
-            <p>Personal and professional blogs</p>
-            <p>Content curation platforms</p>
-          </div>
-          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-bullhorn" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>Landing Pages</h3>
-            <p>Product launch pages</p>
-            <p>Marketing and advertising campaign pages</p>
-            <p>Lead generation pages</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Mobile App Services -->
-    <div class="service-category" style="background: white; padding: 4rem 1rem;">
-      <div class="service-category-content" style="max-width: 1200px; margin: 0 auto;">
-        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">
-          <i class="fas fa-mobile-alt"></i> Mobile Application Services
-        </h2>
-        <div class="service-list" style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-          <div class="service-item" style="background: var(--light); padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-dumbbell" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>Fitness Apps</h3>
-            <p>Workout tracking & health monitoring</p>
-          </div>
-          <div class="service-item" style="background: var(--light); padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-wallet" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>Finance Apps</h3>
-            <p>Mobile banking & financial management</p>
-          </div>
-          <!-- Add more mobile services -->
-        </div>
-        <div class="tech-stack" style="margin-top: 2rem; text-align: center;">
-          <h4 style="color: var(--dark); margin-bottom: 1rem;">Technology Stack:</h4>
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Flutter</span>
-            <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Swift</span>
-            <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Kotlin</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Desktop App Services -->
-    <div class="service-category" style="background: var(--light); padding: 4rem 1rem;">
-      <div class="service-category-content" style="max-width: 1200px; margin: 0 auto;">
-        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">
-          <i class="fas fa-desktop"></i> Desktop Application Services
-        </h2>
-        <div class="service-list" style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-industry" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>Enterprise Solutions</h3>
-            <p>Custom ERP & inventory management</p>
-          </div>
-          <div class="service-item" style="background: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
-            <i class="fas fa-paint-brush" style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 1rem;"></i>
-            <h3>Creative Tools</h3>
-            <p>Design & multimedia applications</p>
-          </div>
-          <!-- Add more desktop services -->
-        </div>
-        <div class="tech-stack" style="margin-top: 2rem; text-align: center;">
-          <h4 style="color: var(--dark); margin-bottom: 1rem;">Technology Stack:</h4>
-          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Electron</span>
-            <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">.NET</span>
-            <span style="background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 20px;">Java</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="benefits">
-    <h2 class="section-title">Your Benefits</h2>
-    <div class="benefits-grid">
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
-        <h3>Revenue Growth</h3>
-        <p>24/7 digital storefront increases sales conversion by 40%</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-clock"></i></div>
-        <h3>Time Saving</h3>
-        <p>Automation reduces manual work by 15 hours/week</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
-        <h3>Security First</h3>
-        <p>Enterprise-grade security protocols for your peace of mind</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
-        <h3>Fast Deployment</h3>
-        <p>Agile development process delivering results in weeks</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="portfolio">
-    <h2 class="section-title">Our Work</h2>
+  <section id="portfolio" class="portfolio">
+    <h2 class="section-title">Our Recent Projects <span class="title-accent">🚀</span></h2>
     <div class="portfolio-grid">
       <div class="portfolio-item">
-        <img src="https://source.unsplash.com/random/800x600?ecommerce" alt="E-commerce Platform">
-        <div class="portfolio-overlay">
-          <h3>E-commerce Platform</h3>
-          <p>React, Node.js, MongoDB</p>
-          <a href="#" class="button" style="margin-top: 1rem;">View Case Study</a>
+        <img src="images/1.png">
+        <div class="portfolio-content">
+          <h3>Sumul Parlour Management</h3>
+          <p>A complete management solution designed to streamline operations, enhance efficiency, and improve customer experience for parlours.</p>
+        </div>
+
+      </div>
+      <div class="portfolio-item">
+        <img src="images/2.png" alt="responsive app">
+        <div class="portfolio-content">
+          <h3>Sarvadnya Gurukul</h3>
+          <p>An advanced learning platform offering multiple courses across various domains, designed for seamless online education and skill development.</p>
         </div>
       </div>
       <div class="portfolio-item">
-        <img src="https://source.unsplash.com/random/800x600?mobileapp" alt="Mobile App">
-        <div class="portfolio-overlay">
-          <h3>Fitness Tracker App</h3>
-          <p>Flutter, Firebase, AI Integration</p>
-          <a href="#" class="button" style="margin-top: 1rem;">View Case Study</a>
+        <img src="images/3.png" alt="Inventory Management">
+        <div class="portfolio-content">
+          <h3>Inventory Management</h3>
+          <p>Desktop application for real-time inventory tracking and reporting.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/4.png" alt="Inventory Management">
+        <div class="portfolio-content">
+          <h3>Society Management System</h3>
+          <p>A comprehensive solution to manage residential and commercial societies, including member management, maintenance tracking, and communication tools.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="testimonials">
-    <h2 class="section-title">Client Testimonials</h2>
+  <section id="testimonials" class="testimonials">
+    <h2 class="section-title">What Our Clients Say <span class="title-accent">💬</span></h2>
     <div class="testimonial-grid">
       <div class="testimonial-card">
-        <p>"Outstanding development work that exceeded our expectations. Delivered on time and within budget."</p>
-        <h4 style="margin-top: 1rem;">— John Smith, Tech Startup CEO</h4>
+        <img src="/api/placeholder/80/80" alt="Client 1">
+        <h3>Dipak More</h3>
+        <p>"The team delivered exactly what we needed. Our new web application has significantly improved our business operations."</p>
       </div>
       <div class="testimonial-card">
-        <p>"Transformed our legacy system into a modern web application with perfect feature implementation."</p>
-        <h4 style="margin-top: 1rem;">— Sarah Johnson, Enterprise Client</h4>
+        <img src="/api/placeholder/80/80" alt="Client 2">
+        <h3>Chintan Bhatporia</h3>
+        <p>"Outstanding mobile app development service. Professional, responsive, and delivered on time."</p>
+      </div>
+      <div class="testimonial-card">
+        <img src="/api/placeholder/80/80" alt="Client 3">
+        <h3>Kiran Jewellery</h3>
+        <p>"Their expertise in desktop application development helped us streamline our workflow tremendously."</p>
       </div>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h2 class="section-title">Start Your Project</h2>
-    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" class="form-input" name="name" placeholder="Your Name" required>
-      <input type="email" class="form-input" name="email" placeholder="Your Email" required>
-      <textarea class="form-input" name="message" rows="5" placeholder="Project Details" required></textarea>
-      <button type="submit" class="button">
-        Send Message
-        <i class="fas fa-paper-plane"></i>
-      </button>
-    </form>
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <p>With over 5 years of experience in custom software development, we've helped businesses of all sizes transform their digital presence. Our team of expert developers, designers, and project managers works together to deliver high-quality solutions that exceed expectations.</p>
+      <p>We pride ourselves on our attention to detail, commitment to quality, and focus on delivering value to our clients.</p>
+    </div>
   </section>
 
+  <section id="contact" class="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </section>
   <script>
-    // Smooth scroll for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
+    // Mobile menu functionality
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      this.querySelector('i').classList.toggle('fa-bars');
+      this.querySelector('i').classList.toggle('fa-times');
     });
 
-    // Reveal animations on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+        document.querySelector('.mobile-menu-btn i').classList.add('fa-bars');
+        document.querySelector('.mobile-menu-btn i').classList.remove('fa-times');
       });
-    }, {
-      threshold: 0.1
-    });
-
-    document.querySelectorAll('.service-card, .portfolio-item, .testimonial-card').forEach((el) => {
-      observer.observe(el);
     });
   </script>
 </body>
