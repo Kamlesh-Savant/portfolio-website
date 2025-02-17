@@ -223,6 +223,7 @@
     font-weight: bold;
     margin-bottom: 2rem;
     text-transform: uppercase;
+    text-align: center;
   }
 
   .services-grid {
@@ -241,6 +242,10 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .service-card::before {
